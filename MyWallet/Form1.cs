@@ -40,6 +40,12 @@ namespace MyWallet
             PnlNav.Top = button1.Top;
             PnlNav.Left = button1.Left;
             button1.BackColor = Color.FromArgb(46, 51, 73);
+            IblTitle.Text = "Anasayfa";
+            this.PnlFormLoader.Controls.Clear();
+            Form2 f2 = new Form2() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            f2.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(f2);
+            f2.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,6 +59,13 @@ namespace MyWallet
             PnlNav.Top = btnDashboard.Top;
             PnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+
+            IblTitle.Text = "Anasayfa";
+            this.PnlFormLoader.Controls.Clear();
+            Form2 f2 = new Form2() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            f2.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(f2);
+            f2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -70,6 +83,12 @@ namespace MyWallet
             PnlNav.Top = button3.Top;
             PnlNav.Left = button3.Left;
             button3.BackColor = Color.FromArgb(46, 51, 73);
+            IblTitle.Text = "Ayarlar";
+            this.PnlFormLoader.Controls.Clear();
+            ayarlar f3 = new ayarlar() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            f3.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(f3);
+            f3.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
