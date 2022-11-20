@@ -32,6 +32,12 @@ namespace MyWallet
             PnlNav.Top = btnDashboard.Top;
             PnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+            IblTitle.Text = "Anasayfa";
+            this.PnlFormLoader.Controls.Clear();
+            Form2 f2 = new Form2() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            f2.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(f2);
+            f2.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,12 +46,7 @@ namespace MyWallet
             PnlNav.Top = button1.Top;
             PnlNav.Left = button1.Left;
             button1.BackColor = Color.FromArgb(46, 51, 73);
-            IblTitle.Text = "Anasayfa";
-            this.PnlFormLoader.Controls.Clear();
-            Form2 f2 = new Form2() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            f2.FormBorderStyle = FormBorderStyle.None;
-            this.PnlFormLoader.Controls.Add(f2);
-            f2.Show();
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)
