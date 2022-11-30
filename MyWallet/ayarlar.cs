@@ -14,5 +14,10 @@ namespace MyWallet
         {
             InitializeComponent();
         }
+
+        private void ayarlar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

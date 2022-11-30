@@ -33,8 +33,8 @@ namespace MyWallet
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.userText = new System.Windows.Forms.TextBox();
+            this.passText = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -86,20 +86,21 @@ namespace MyWallet
             this.button1.TabIndex = 3;
             this.button1.Text = "Giriş Yap";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // userText
             // 
-            this.textBox1.Location = new System.Drawing.Point(232, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 4;
+            this.userText.Location = new System.Drawing.Point(232, 138);
+            this.userText.Name = "userText";
+            this.userText.Size = new System.Drawing.Size(125, 27);
+            this.userText.TabIndex = 4;
             // 
-            // textBox2
+            // passText
             // 
-            this.textBox2.Location = new System.Drawing.Point(232, 222);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 5;
+            this.passText.Location = new System.Drawing.Point(232, 222);
+            this.passText.Name = "passText";
+            this.passText.Size = new System.Drawing.Size(125, 27);
+            this.passText.TabIndex = 5;
             // 
             // statusStrip1
             // 
@@ -128,6 +129,7 @@ namespace MyWallet
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(151, 20);
             this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // login
             // 
@@ -136,8 +138,8 @@ namespace MyWallet
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(490, 430);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passText);
+            this.Controls.Add(this.userText);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -145,6 +147,7 @@ namespace MyWallet
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
             this.Text = "login";
+            this.Load += new System.EventHandler(this.login_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -158,8 +161,8 @@ namespace MyWallet
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox userText;
+        private System.Windows.Forms.TextBox passText;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
