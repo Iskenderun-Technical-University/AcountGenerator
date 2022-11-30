@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Microsoft.Data.SqlClient;
 
 namespace MyWallet
 {
@@ -24,6 +25,7 @@ namespace MyWallet
          int nHeightEllipse
 
       );
+       
         public Form1()
         {
             InitializeComponent();
@@ -46,12 +48,20 @@ namespace MyWallet
             PnlNav.Top = button1.Top;
             PnlNav.Left = button1.Left;
             button1.BackColor = Color.FromArgb(46, 51, 73);
-          
+            IblTitle.Text = "Market";
+            this.PnlFormLoader.Controls.Clear();
+            shop f4 = new shop() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            f4.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(f4);
+            f4.Show();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            SqlConnection con = new SqlConnection();
+            con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
+            label1.Text = "Connection Status:True";
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)
@@ -103,6 +113,21 @@ namespace MyWallet
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PnlFormLoader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

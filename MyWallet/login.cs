@@ -28,10 +28,11 @@ namespace MyWallet
 
         }
 
+
         private void login_Load(object sender, EventArgs e)
         {
-           
-
+            con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
+            toolStripStatusLabel2.Text = "Baglanti Basarili!";
         }
        
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +42,6 @@ namespace MyWallet
             con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
             cmd = new SqlCommand();
             con.Open();
-            toolStripStatusLabel2.Text = "Baglanildi";
             cmd.Connection = con;
             cmd.CommandText = "SELECT * FROM Users where name='" + userText.Text + "' AND pass='" + passText.Text + "'";
             dr = cmd.ExecuteReader();
@@ -54,8 +54,7 @@ namespace MyWallet
             }
             else
             {
-                MessageBox.Show("Kullanıcı adını ve şifrenizi kontrol ediniz.");
-                toolStripStatusLabel2.Text = "Basarisiz";
+                toolStripStatusLabel2.Text = "Kullanıcı adını ve şifrenizi kontrol ediniz.";
                 toolStripStatusLabel2.ForeColor = Color.Red;
             }
             con.Close();

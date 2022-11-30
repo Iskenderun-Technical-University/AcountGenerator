@@ -46,7 +46,7 @@ namespace MyWallet
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(149, 20);
+            this.label1.Location = new System.Drawing.Point(168, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 35);
             this.label1.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace MyWallet
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(69, 214);
+            this.label2.Location = new System.Drawing.Point(111, 205);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 35);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace MyWallet
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(39, 132);
+            this.label3.Location = new System.Drawing.Point(81, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 35);
             this.label3.TabIndex = 2;
@@ -80,7 +80,7 @@ namespace MyWallet
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe Script", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(241, 297);
+            this.button1.Location = new System.Drawing.Point(187, 305);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 38);
             this.button1.TabIndex = 3;
@@ -90,15 +90,16 @@ namespace MyWallet
             // 
             // userText
             // 
-            this.userText.Location = new System.Drawing.Point(232, 138);
+            this.userText.Location = new System.Drawing.Point(274, 129);
             this.userText.Name = "userText";
             this.userText.Size = new System.Drawing.Size(125, 27);
             this.userText.TabIndex = 4;
             // 
             // passText
             // 
-            this.passText.Location = new System.Drawing.Point(232, 222);
+            this.passText.Location = new System.Drawing.Point(274, 213);
             this.passText.Name = "passText";
+            this.passText.PasswordChar = '*';
             this.passText.Size = new System.Drawing.Size(125, 27);
             this.passText.TabIndex = 5;
             // 
@@ -146,6 +147,7 @@ namespace MyWallet
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
             this.Load += new System.EventHandler(this.login_Load);
             this.statusStrip1.ResumeLayout(false);

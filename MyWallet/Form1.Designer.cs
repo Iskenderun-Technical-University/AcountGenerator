@@ -106,7 +106,7 @@ namespace MyWallet
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 42);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Analizler";
+            this.button1.Text = "Market";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -149,13 +149,14 @@ namespace MyWallet
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(36, 101);
+            this.label1.Location = new System.Drawing.Point(12, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 20);
+            this.label1.Size = new System.Drawing.Size(92, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Kullanici Adi";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -174,7 +175,7 @@ namespace MyWallet
             this.IblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(170)))));
             this.IblTitle.Location = new System.Drawing.Point(237, 22);
             this.IblTitle.Name = "IblTitle";
-            this.IblTitle.Size = new System.Drawing.Size(167, 39);
+            this.IblTitle.Size = new System.Drawing.Size(162, 38);
             this.IblTitle.TabIndex = 1;
             this.IblTitle.Text = "Anasayfa";
             // 
@@ -210,6 +211,7 @@ namespace MyWallet
             this.PnlFormLoader.Name = "PnlFormLoader";
             this.PnlFormLoader.Size = new System.Drawing.Size(740, 477);
             this.PnlFormLoader.TabIndex = 4;
+            this.PnlFormLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlFormLoader_Paint);
             // 
             // Form1
             // 
