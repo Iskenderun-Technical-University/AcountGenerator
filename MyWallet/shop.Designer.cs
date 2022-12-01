@@ -37,6 +37,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -82,8 +83,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 38);
             this.button1.TabIndex = 9;
-            this.button1.Text = "BTC AL";
+            this.button1.Text = "20TL";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -91,11 +93,11 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe Script", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(277, 251);
+            this.button3.Location = new System.Drawing.Point(288, 251);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 38);
             this.button3.TabIndex = 11;
-            this.button3.Text = "DOGE AL";
+            this.button3.Text = "50TL";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -108,7 +110,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(132, 38);
             this.button4.TabIndex = 12;
-            this.button4.Text = "SHİBA AL";
+            this.button4.Text = "100 TL";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -128,12 +130,24 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(590, 21);
+            this.label2.Location = new System.Drawing.Point(612, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 31);
             this.label2.TabIndex = 14;
             this.label2.Text = "BAKİYENİZ:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(590, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 31);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "$";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // shop
             // 
@@ -141,6 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
@@ -170,5 +185,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

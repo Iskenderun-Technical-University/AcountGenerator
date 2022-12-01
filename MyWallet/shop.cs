@@ -18,11 +18,13 @@ namespace MyWallet
         {
             InitializeComponent();
         }
-
+        int count = 1000;
+        int doge;
+        int bitcoin;
         private void shop_Load(object sender, EventArgs e)
         {
 
-             int count =1000;
+             
             label2.Text = count.ToString();
         }
 
@@ -34,6 +36,18 @@ namespace MyWallet
         private void label2_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
