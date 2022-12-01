@@ -25,7 +25,7 @@ namespace MyWallet
             baglanti.Open();
             deger = (string)komut.ExecuteScalar();
             baglanti.Close();
-            label4.Text = deger;
+            
 
         }
 
@@ -40,6 +40,11 @@ namespace MyWallet
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

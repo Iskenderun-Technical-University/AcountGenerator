@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+
 
 namespace MyWallet
 {
@@ -18,14 +20,11 @@ namespace MyWallet
         {
             InitializeComponent();
         }
-        int count = 1000;
-        int doge;
-        int bitcoin;
+       
         private void shop_Load(object sender, EventArgs e)
         {
 
-             
-            label2.Text = count.ToString();
+          
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -40,8 +39,8 @@ namespace MyWallet
 
         private void button1_Click(object sender, EventArgs e)
         {
+         
            
-
 
         }
 

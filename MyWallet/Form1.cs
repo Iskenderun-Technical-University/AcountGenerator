@@ -14,26 +14,11 @@ namespace MyWallet
 {
     public partial class Form1 : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-     (
-          int nLeftRect,
-          int nTopRect,
-          int nRightRect,
-          int nBottomRect,
-          int nWidthEllipse,
-         int nHeightEllipse
-
-      );
-       
+      
         public Form1()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            PnlNav.Height = btnDashboard.Height;
-            PnlNav.Top = btnDashboard.Top;
-            PnlNav.Left = btnDashboard.Left;
-            btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+      
             IblTitle.Text = "Anasayfa";
             this.PnlFormLoader.Controls.Clear();
             Form2 f2 = new Form2() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -44,16 +29,14 @@ namespace MyWallet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PnlNav.Height = button1.Height;
-            PnlNav.Top = button1.Top;
-            PnlNav.Left = button1.Left;
-            button1.BackColor = Color.FromArgb(46, 51, 73);
-            IblTitle.Text = "Market";
+          
+
+            IblTitle.Text = "Kelime Ara";
             this.PnlFormLoader.Controls.Clear();
-            shop f4 = new shop() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            f4.FormBorderStyle = FormBorderStyle.None;
-            this.PnlFormLoader.Controls.Add(f4);
-            f4.Show();
+            keywords f3 = new keywords() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            f3.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(f3);
+            f3.Show();
 
         }
 
@@ -61,15 +44,12 @@ namespace MyWallet
         {
             SqlConnection con = new SqlConnection();
             con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
-            label1.Text = "Connection Status:True";
+       
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
-            PnlNav.Height = btnDashboard.Height;
-            PnlNav.Top = btnDashboard.Top;
-            PnlNav.Left = btnDashboard.Left;
-            btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+            
 
             IblTitle.Text = "Anasayfa";
             this.PnlFormLoader.Controls.Clear();
@@ -81,20 +61,13 @@ namespace MyWallet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PnlNav.Height = button2.Height;
-            PnlNav.Top = button2.Top;
-            PnlNav.Left = button2.Left;
-            button2.BackColor = Color.FromArgb(46, 51, 73);
-
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PnlNav.Height = button3.Height;
-            PnlNav.Top = button3.Top;
-            PnlNav.Left = button3.Left;
-            button3.BackColor = Color.FromArgb(46, 51, 73);
-            IblTitle.Text = "Ayarlar";
+          
+            IblTitle.Text = "Kelime Ekle";
             this.PnlFormLoader.Controls.Clear();
             ayarlar f3 = new ayarlar() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             f3.FormBorderStyle = FormBorderStyle.None;
