@@ -44,7 +44,6 @@ namespace MyWallet
         {
             SqlConnection con = new SqlConnection();
             con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
-       
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)
@@ -103,6 +102,21 @@ namespace MyWallet
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            IblTitle.Text = "Derslerim";
+            this.PnlFormLoader.Controls.Clear();
+            shop f5 = new shop() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            f5.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(f5);
+            f5.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

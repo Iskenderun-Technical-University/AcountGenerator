@@ -42,7 +42,7 @@ namespace MyWallet
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(160, 122);
+            this.label1.Location = new System.Drawing.Point(161, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 36);
             this.label1.TabIndex = 0;
@@ -50,14 +50,14 @@ namespace MyWallet
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(351, 122);
+            this.textBox1.Location = new System.Drawing.Point(352, 135);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(189, 27);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(351, 236);
+            this.textBox2.Location = new System.Drawing.Point(352, 249);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(189, 27);
             this.textBox2.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace MyWallet
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(160, 230);
+            this.label3.Location = new System.Drawing.Point(161, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(150, 36);
             this.label3.TabIndex = 15;

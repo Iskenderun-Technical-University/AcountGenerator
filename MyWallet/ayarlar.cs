@@ -32,7 +32,7 @@ namespace MyWallet
             con.Open();
             komut.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("Kelime basari ile veritabanina eklendi!,","Tebrikler!");
+            MessageBox.Show("Kelime basari ile eklendi!,","Tebrikler!");
             textBox1.Text = "";
             textBox2.Text = "";
         }

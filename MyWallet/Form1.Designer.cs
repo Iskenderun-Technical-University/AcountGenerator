@@ -36,6 +36,7 @@ namespace MyWallet
             this.button1 = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelPrice = new System.Windows.Forms.Label();
             this.PnlNav = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IblTitle = new System.Windows.Forms.Label();
@@ -67,13 +68,14 @@ namespace MyWallet
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button2.Location = new System.Drawing.Point(9, 432);
+            this.button2.Location = new System.Drawing.Point(9, 300);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 42);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Market";
+            this.button2.Text = "Derslerim";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
@@ -81,7 +83,7 @@ namespace MyWallet
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button3.Location = new System.Drawing.Point(26, 266);
+            this.button3.Location = new System.Drawing.Point(27, 383);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(149, 38);
             this.button3.TabIndex = 5;
@@ -96,7 +98,7 @@ namespace MyWallet
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.Location = new System.Drawing.Point(9, 346);
+            this.button1.Location = new System.Drawing.Point(9, 458);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 42);
             this.button1.TabIndex = 3;
@@ -111,7 +113,7 @@ namespace MyWallet
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnDashboard.Location = new System.Drawing.Point(9, 161);
+            this.btnDashboard.Location = new System.Drawing.Point(9, 224);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(186, 42);
             this.btnDashboard.TabIndex = 2;
@@ -122,6 +124,7 @@ namespace MyWallet
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.labelPrice);
             this.panel2.Controls.Add(this.PnlNav);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -129,6 +132,17 @@ namespace MyWallet
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(211, 144);
             this.panel2.TabIndex = 0;
+            // 
+            // labelPrice
+            // 
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(170)))));
+            this.labelPrice.Location = new System.Drawing.Point(70, 108);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(62, 25);
+            this.labelPrice.TabIndex = 3;
+            this.labelPrice.Text = "Emre";
             // 
             // PnlNav
             // 
@@ -141,7 +155,7 @@ namespace MyWallet
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(54, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(96, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,7 +167,7 @@ namespace MyWallet
             this.IblTitle.AutoSize = true;
             this.IblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.IblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(170)))));
-            this.IblTitle.Location = new System.Drawing.Point(509, 22);
+            this.IblTitle.Location = new System.Drawing.Point(467, 25);
             this.IblTitle.Name = "IblTitle";
             this.IblTitle.Size = new System.Drawing.Size(162, 38);
             this.IblTitle.TabIndex = 1;
@@ -193,12 +207,14 @@ namespace MyWallet
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -218,6 +234,7 @@ namespace MyWallet
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel PnlFormLoader;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelPrice;
     }
 }
 
