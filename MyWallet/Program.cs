@@ -17,7 +17,7 @@ namespace MyWallet
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new soru());
+            Application.Run(new login());
         }
     }
 }

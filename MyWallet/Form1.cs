@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Microsoft.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MyWallet
 {
@@ -44,6 +45,14 @@ namespace MyWallet
         {
             SqlConnection con = new SqlConnection();
             con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
+            con.Open();
+            SqlCommand komut = new SqlCommand("Select * from Users", con);
+            SqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            { 
+                uid.Text = (oku["name"].ToString());
+            }
+            con.Close();
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)
@@ -117,6 +126,22 @@ namespace MyWallet
         private void button5_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+            IblTitle.Text = "Sorular";
+            this.PnlFormLoader.Controls.Clear();
+            soru f16 = new soru() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            f16.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(f16);
+            f16.Show();
+        }
+
+        private void labelPrice_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

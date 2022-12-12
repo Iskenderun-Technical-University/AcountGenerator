@@ -31,12 +31,13 @@ namespace MyWallet
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.labelPrice = new System.Windows.Forms.Label();
+            this.uid = new System.Windows.Forms.Label();
             this.PnlNav = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IblTitle = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@ namespace MyWallet
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
@@ -62,13 +64,28 @@ namespace MyWallet
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button5.Location = new System.Drawing.Point(9, 507);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(186, 42);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Soru Bankası";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button2.Location = new System.Drawing.Point(9, 300);
+            this.button2.Location = new System.Drawing.Point(9, 251);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 42);
             this.button2.TabIndex = 6;
@@ -83,7 +100,7 @@ namespace MyWallet
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button3.Location = new System.Drawing.Point(27, 383);
+            this.button3.Location = new System.Drawing.Point(26, 338);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(149, 38);
             this.button3.TabIndex = 5;
@@ -98,7 +115,7 @@ namespace MyWallet
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.Location = new System.Drawing.Point(9, 458);
+            this.button1.Location = new System.Drawing.Point(9, 423);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 42);
             this.button1.TabIndex = 3;
@@ -113,7 +130,7 @@ namespace MyWallet
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnDashboard.Location = new System.Drawing.Point(9, 224);
+            this.btnDashboard.Location = new System.Drawing.Point(9, 171);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(186, 42);
             this.btnDashboard.TabIndex = 2;
@@ -124,7 +141,7 @@ namespace MyWallet
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.labelPrice);
+            this.panel2.Controls.Add(this.uid);
             this.panel2.Controls.Add(this.PnlNav);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -133,16 +150,17 @@ namespace MyWallet
             this.panel2.Size = new System.Drawing.Size(211, 144);
             this.panel2.TabIndex = 0;
             // 
-            // labelPrice
+            // uid
             // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(170)))));
-            this.labelPrice.Location = new System.Drawing.Point(70, 108);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(62, 25);
-            this.labelPrice.TabIndex = 3;
-            this.labelPrice.Text = "Emre";
+            this.uid.AutoSize = true;
+            this.uid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.uid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(170)))));
+            this.uid.Location = new System.Drawing.Point(40, 106);
+            this.uid.Name = "uid";
+            this.uid.Size = new System.Drawing.Size(110, 25);
+            this.uid.TabIndex = 3;
+            this.uid.Text = "Username";
+            this.uid.Click += new System.EventHandler(this.labelPrice_Click);
             // 
             // PnlNav
             // 
@@ -165,11 +183,11 @@ namespace MyWallet
             // IblTitle
             // 
             this.IblTitle.AutoSize = true;
-            this.IblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.IblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.IblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(170)))));
-            this.IblTitle.Location = new System.Drawing.Point(467, 25);
+            this.IblTitle.Location = new System.Drawing.Point(501, 42);
             this.IblTitle.Name = "IblTitle";
-            this.IblTitle.Size = new System.Drawing.Size(162, 38);
+            this.IblTitle.Size = new System.Drawing.Size(147, 36);
             this.IblTitle.TabIndex = 1;
             this.IblTitle.Text = "Anasayfa";
             // 
@@ -234,7 +252,8 @@ namespace MyWallet
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel PnlFormLoader;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label labelPrice;
+        private System.Windows.Forms.Label uid;
+        private System.Windows.Forms.Button button5;
     }
 }
 
