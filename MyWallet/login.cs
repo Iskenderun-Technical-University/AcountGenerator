@@ -31,29 +31,30 @@ namespace MyWallet
 
         private void login_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
-            toolStripStatusLabel2.Text = "Baglanti Basarili!";
+            con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True"); //Bağlantımızı yaptık
+            toolStripStatusLabel2.Text = "Baglanti Basarili!"; // yazdır
         }
        
         private void button1_Click(object sender, EventArgs e)
         {
-            string user = userText.Text;
-            string pass = passText.Text;
+            string user = userText.Text; // kullanıcı adı tanımladık
+            string pass = passText.Text; // şifre tanımladık
             con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
             cmd = new SqlCommand();
-            con.Open();
+            con.Open(); // bağlantıyı açtık
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM Users where name='" + userText.Text + "' AND pass='" + passText.Text + "'";
+            cmd.CommandText = "SELECT * FROM Users where name='" + userText.Text + "' AND pass='" + passText.Text + "'"; // Users Tablosunun name sütununu user texte,pass sütununu passtexte çektik.
             dr = cmd.ExecuteReader();
-            if (dr.Read())
+            if (dr.Read()) // bağlantı başarılı bir şekilde okunuyorsa
             {
-                MessageBox.Show("Tebrikler! Başarılı bir şekilde giriş yaptınız. Anasayfaya Yönlendiriliyorsunuz..");
+                MessageBox.Show("Başarılı bir şekilde giriş yaptınız. Anasayfaya Yönlendiriliyorsunuz.."); // Mesaj ver 
                 Form1 f1 = new Form1();
                 f1.Show();
                 this.Hide();
             }
-            else
+            else // bağlantı başarılı bir şekilde okunmuyorsa
             {
+                MessageBox.Show("Kullanıcı adını ve şifrenizi kontrol ediniz.");
                 toolStripStatusLabel2.Text = "Kullanıcı adını ve şifrenizi kontrol ediniz.";
                 toolStripStatusLabel2.ForeColor = Color.Red;
             }
@@ -65,6 +66,11 @@ namespace MyWallet
 
                
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

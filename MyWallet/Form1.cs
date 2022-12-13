@@ -31,9 +31,9 @@ namespace MyWallet
         private void button1_Click(object sender, EventArgs e)
         {
           
-
-            IblTitle.Text = "Kelime Ara";
-            this.PnlFormLoader.Controls.Clear();
+            // Diğer sayfanın geçişi için kodlamalar
+            IblTitle.Text = "Kelime Ara"; // sayfanın texti
+            this.PnlFormLoader.Controls.Clear(); // panelin içine yeni sayfayı çekiyoruz.
             keywords f3 = new keywords() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             f3.FormBorderStyle = FormBorderStyle.None;
             this.PnlFormLoader.Controls.Add(f3);
@@ -43,22 +43,23 @@ namespace MyWallet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection();
-            con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
-            con.Open();
-            SqlCommand komut = new SqlCommand("Select * from Users", con);
-            SqlDataReader oku = komut.ExecuteReader();
+            // Form Loadında Gerçekleşecek Eventler
+            SqlConnection con = new SqlConnection(); // connectionumuzu oluşturduk.
+            con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");// veri tabanı bağlantısı
+            con.Open(); // bağlantımızı açtık
+            SqlCommand komut = new SqlCommand("Select * from Users", con);// users tablosuna sorgu gönderdik
+            SqlDataReader oku = komut.ExecuteReader(); // verileri okutuyoruz.
             while (oku.Read())
             { 
-                uid.Text = (oku["name"].ToString());
+                uid.Text = (oku["name"].ToString()); // textboxa name sütunundaki veriyi çektirdik
             }
             con.Close();
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
-            
 
+            // Diğer sayfanın geçişi için kodlamalar
             IblTitle.Text = "Anasayfa";
             this.PnlFormLoader.Controls.Clear();
             Form2 f2 = new Form2() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -74,7 +75,7 @@ namespace MyWallet
 
         private void button3_Click(object sender, EventArgs e)
         {
-          
+            // Diğer sayfanın geçişi için kodlamalar
             IblTitle.Text = "Kelime Ekle";
             this.PnlFormLoader.Controls.Clear();
             ayarlar f3 = new ayarlar() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -90,7 +91,7 @@ namespace MyWallet
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); // uygulamayı kapat
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -115,7 +116,7 @@ namespace MyWallet
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            IblTitle.Text = "Derslerim";
+            IblTitle.Text = "Ders Oynatıcısı";
             this.PnlFormLoader.Controls.Clear();
             shop f5 = new shop() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             f5.FormBorderStyle = FormBorderStyle.None;

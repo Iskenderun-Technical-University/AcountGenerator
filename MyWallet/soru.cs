@@ -19,8 +19,8 @@ namespace MyWallet
             InitializeComponent();
         }
         SqlConnection baglanti = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
-        int sayac = 0;
-        int puan = 0;
+        int sayac = 0; // soru sayıları için yerel sayaç değişkenimizi oluşturduk
+        int puan = 0; // yerel puan değişkenimizi oluşturduk
 
 
         private void soru_Load(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace MyWallet
                 baglanti.Open();
                 SqlCommand komut = new SqlCommand("Select * from quest order by NEWID()", baglanti);
                 SqlDataReader oku = komut.ExecuteReader();
-                while (oku.Read())
+                while (oku.Read()) // veri tabanındaki verileri araçlarımıza çektirelim
                 {
                     textBox1.Text = (oku["soru"].ToString());
                     button1.Text = (oku["a"].ToString());
@@ -54,10 +54,10 @@ namespace MyWallet
                 }
               
                 baglanti.Close();
-            if(puan ==60)
+            if(puan ==60) // 60 puan şartına ulaşırsa
             {
-                button5.Text = "Oyun Bitti";
-                button5.Enabled = false;
+                button5.Text = "Oyun Bitti"; // butona Oyun Bitti Yazar.
+                button5.Enabled = false; // butonun kullanılabilirliğini false ettik çünkü oyun bitti.
                 button1.Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;

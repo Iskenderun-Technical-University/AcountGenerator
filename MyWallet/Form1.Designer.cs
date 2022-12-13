@@ -155,7 +155,7 @@ namespace MyWallet
             this.uid.AutoSize = true;
             this.uid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.uid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(170)))));
-            this.uid.Location = new System.Drawing.Point(40, 106);
+            this.uid.Location = new System.Drawing.Point(65, 110);
             this.uid.Name = "uid";
             this.uid.Size = new System.Drawing.Size(110, 25);
             this.uid.TabIndex = 3;
@@ -185,7 +185,7 @@ namespace MyWallet
             this.IblTitle.AutoSize = true;
             this.IblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.IblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(170)))));
-            this.IblTitle.Location = new System.Drawing.Point(501, 42);
+            this.IblTitle.Location = new System.Drawing.Point(477, 56);
             this.IblTitle.Name = "IblTitle";
             this.IblTitle.Size = new System.Drawing.Size(147, 36);
             this.IblTitle.TabIndex = 1;
