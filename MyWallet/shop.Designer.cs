@@ -42,7 +42,7 @@
             this.webView21.Size = new System.Drawing.Size(709, 453);
             this.webView21.TabIndex = 10;
             this.webView21.ZoomFactor = 1D;
-            this.webView21.Click += new System.EventHandler(this.webView21_Click);
+           
             // 
             // shop
             // 

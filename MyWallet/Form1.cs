@@ -68,11 +68,6 @@ namespace MyWallet
             f2.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             // Diğer sayfanın geçişi için kodlamalar
@@ -84,34 +79,9 @@ namespace MyWallet
             f3.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit(); // uygulamayı kapat
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PnlFormLoader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -124,10 +94,7 @@ namespace MyWallet
             f5.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-          
-        }
+
 
         private void button5_Click_1(object sender, EventArgs e)
         {
@@ -138,11 +105,6 @@ namespace MyWallet
             f16.FormBorderStyle = FormBorderStyle.None;
             this.PnlFormLoader.Controls.Add(f16);
             f16.Show();
-        }
-
-        private void labelPrice_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

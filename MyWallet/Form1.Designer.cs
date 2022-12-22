@@ -62,7 +62,7 @@ namespace MyWallet
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 597);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+          
             // 
             // button5
             // 
@@ -160,7 +160,7 @@ namespace MyWallet
             this.uid.Size = new System.Drawing.Size(110, 25);
             this.uid.TabIndex = 3;
             this.uid.Text = "Username";
-            this.uid.Click += new System.EventHandler(this.labelPrice_Click);
+            
             // 
             // PnlNav
             // 
@@ -206,12 +206,13 @@ namespace MyWallet
             // 
             // PnlFormLoader
             // 
+            this.PnlFormLoader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PnlFormLoader.Location = new System.Drawing.Point(211, 120);
             this.PnlFormLoader.Name = "PnlFormLoader";
             this.PnlFormLoader.Size = new System.Drawing.Size(740, 477);
             this.PnlFormLoader.TabIndex = 4;
-            this.PnlFormLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlFormLoader_Paint);
+            
             // 
             // Form1
             // 

@@ -18,12 +18,6 @@ namespace MyWallet
         }
         SqlConnection con =new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True");
 
-
-        private void ayarlar_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string turkce = textBox1.Text; // string verilerimizi tutması için değer tanımladık

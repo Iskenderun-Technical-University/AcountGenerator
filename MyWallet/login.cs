@@ -22,13 +22,6 @@ namespace MyWallet
         SqlDataReader dr;
         bool test;
 
-
-       private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void login_Load(object sender, EventArgs e)
         {
             con = new SqlConnection("server=DESKTOP-ASU836R;Initial Catalog=mywallet;Integrated Security=True;TrustServerCertificate=True"); //Bağlantımızı yaptık
@@ -59,13 +52,6 @@ namespace MyWallet
                 toolStripStatusLabel2.ForeColor = Color.Red;
             }
             con.Close();
-        }
-
-        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
-        {
-
-               
-
         }
 
         private void button4_Click(object sender, EventArgs e)

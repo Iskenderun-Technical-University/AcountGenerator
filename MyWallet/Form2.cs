@@ -24,29 +24,9 @@ namespace MyWallet
             SqlCommand komut = new SqlCommand(sorgu, baglanti);
             baglanti.Open();
             deger = (string)komut.ExecuteScalar();
-            baglanti.Close();
-            
+            baglanti.Close();      
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

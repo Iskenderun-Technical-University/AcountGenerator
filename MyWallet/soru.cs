@@ -142,9 +142,5 @@ namespace MyWallet
             button4.Enabled = false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
