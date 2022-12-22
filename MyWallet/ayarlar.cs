@@ -30,5 +30,7 @@ namespace MyWallet
             textBox1.Text = ""; // ilk başta textboxun içi boş olsun.
             textBox2.Text = "";
         }
+
+  
     }
 }
